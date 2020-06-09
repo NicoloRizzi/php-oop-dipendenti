@@ -1,24 +1,28 @@
 <?php
 class Persona {
-    //Properties
+    //PROPERTIES
     public $nome;
     public $cognome;
     public $eta;
-    public $stipendio;
 
-    //Constructor
-    public function __construct($_nome, $_cognome, $_eta, $_stipendio) {
+    //CONSTRUCT
+    public function __construct($_nome, $_cognome, $_eta) {
         $this->nome = $_nome;
         $this->cognome = $_cognome;
         $this->eta = $_eta;
-        $this->stipendio = $_stipendio;
-
     }
 
-    //Method
-
-    public function getInfoPerson () {
-        return $this->nome . ' ' . $this->cognome . ' ' . $this->eta . ' €' .$this->stipendio;
+    //METHODS
+    public function checkAge($_eta) {
+        if (!is_int ($this->eta) ) {
+            throw new Exception ('Attenzione, il dato non è un INTERO');
+        } elseif ($this->eta < 18) {
+            throw new Exception ('Junior');
+        } elseif ($this->eta > 30) {
+            throw new Exception ('Senior');
+        }
+        return $_eta;
     }
 }
+
 ?>
