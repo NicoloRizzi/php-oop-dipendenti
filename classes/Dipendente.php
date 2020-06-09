@@ -6,12 +6,13 @@ class Dipendente extends Persona {
     public $mansione;
 
     //Construct
-    public function __construct($_nome, $_cognome, $_eta, $_codMatricola, $_mansione) {
-        parent::__construct($_nome, $_cognome, $_eta);
+    public function __construct($_nome, $_cognome, $_eta, $_stipendio, $_codMatricola, $_mansione) {
+        parent::__construct($_nome, $_cognome, $_eta, $_stipendio);
         $this->codMatricola = $_codMatricola;
         $this->mansione = $_mansione;
     }
 }
+/*
 $dipendenti = [
     ['Mario', 'Rossi', rand(18, 65), 'D0001', 'Operaio'],
     ['Pippo', 'Duzioni', rand(18, 65), 'D0002', 'Saldatore'],
@@ -20,5 +21,5 @@ $dipendenti = [
 $result = [];
 foreach ($dirigenti as $dirigente) {
     $result[] = new Dirigente(...$dirigente);
-}
+}*/
 ?>
