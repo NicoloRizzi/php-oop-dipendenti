@@ -29,7 +29,7 @@ include_once __DIR__ . '/db_azienda.php';
             <ul>
                 <li>Nome e Cognome: <?php echo $dipendente->nome . " " . $dipendente->cognome ?></li>
                 <li>Età: <?php try {
-                     echo $dipendente->checkAge($dipendente->eta);
+                    echo $dipendente->checkAge($dipendente->eta);
                 } catch (Exception $e) {
                     echo $e->getMessage();
                 }
